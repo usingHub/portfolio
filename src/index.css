@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --color-parchment: #faf8f5;
+  --color-clay: #f2ebe1;
+  --color-chestnut: #2b221e;
+  --color-wood-ash: #73645c;
+  --color-konoha-orange: #e05a26;
+  --color-amber-glow: #fdf0e9;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-parchment);
+  color: var(--color-chestnut);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* --- Konoha Wind & Aura Animations --- */
+
+@keyframes leafDrift {
+  0% {
+    /* Start completely invisible and tucked safely above the viewport */
+    transform: translateY(-50px) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    /* Fade in smoothly as it begins to fall */
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    /* Drifting down and left */
+    transform: translateY(105vh) translateX(-300px) rotate(450deg);
+    opacity: 0;
+  }
+}
+
+/* Apply the animation classes with the fill-mode fix */
+.animate-leaf-slow {
+  animation: leafDrift 14s linear infinite;
+  animation-fill-mode: backwards; /* Prevents the initial freeze visibility */
+}
+
+.animate-leaf-medium {
+  animation: leafDrift 10s linear infinite;
+  animation-fill-mode: backwards;
+}
+
+.animate-leaf-fast {
+  animation: leafDrift 7s linear infinite;
+  animation-fill-mode: backwards;
+}
