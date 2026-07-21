@@ -96,7 +96,7 @@ export default function Navbar({ activeSection }) {
         <div className="flex items-center gap-5 w-24 justify-end">
           {/* Fixed GitHub Icon */}
           <a
-            href="https://github.com"
+            href="https://github.com/usingHub"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#54433a] hover:text-[#e05a26] transition-colors duration-200"
@@ -109,7 +109,7 @@ export default function Navbar({ activeSection }) {
 
           {/* LinkedIn Icon */}
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/meet-dixit/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#54433a] hover:text-[#e05a26] transition-colors duration-200"

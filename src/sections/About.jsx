@@ -1,102 +1,158 @@
 import React from 'react';
 
 export default function About() {
-  return (
-    <section id="about" className="pt-8 px-4 md:px-8 max-w-5xl mx-auto text-[#54433a]">
-      {/* Section Title */}
-      <div className="flex items-center gap-2 mb-12">
-        <h2 className="text-3xl font-bold tracking-tight relative">
-          About Me
-          <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#e05a26] shadow-[0_0_8px_#e05a26]" />
-        </h2>
-        <div className="h-[1px] bg-[#54433a]/10 flex-grow mt-2" />
-      </div>
+    return (
+        <section id="about" className="scroll-mt-24 py-12 px-4 md:px-8 max-w-5xl mx-auto text-[#54433a]">
 
-      {/* Main Layout Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        {/* TILE 1: THE NINDO (MY COGNITIVE BIO) - Takes up 2 columns on desktop */}
-        <div className="md:col-span-2 bg-white/60 backdrop-blur-sm p-8 rounded-lg border border-[#e05a26]/10 shadow-sm flex flex-col justify-between">
-          <div>
-            <span className="text-xs font-bold tracking-widest uppercase text-[#e05a26] mb-2 block">
-              The Path & Purpose
-            </span>
-            <h3 className="text-2xl font-bold mb-4">Meet Dixit</h3>
-            <p className="leading-relaxed mb-4 text-[#54433a]/90">
-              I am a Computer Science and Engineering student driven by a straightforward philosophy: 
-              software should solve immediate, real-world challenges. I focus on building full-stack 
-              applications that bridge intuitive, user-friendly frontends with scalable, secure architectures.
-            </p>
-            <p className="leading-relaxed text-[#54433a]/90">
-              Whether I'm designing secure logic to protect digital transactions or engineering platforms 
-              that coordinate everyday local services, I look past clean sandbox environments. My ultimate 
-              goal is to build reliable, production-ready systems that deliver genuine value to people.
-            </p>
-          </div>
-        </div>
-
-        {/* TILE 2: TRAINING REGIMEN (DISCIPLINE & DAILY ROUTINE) */}
-        <div className="bg-[#white]/40 backdrop-blur-sm p-8 rounded-lg border border-[#54433a]/10 shadow-sm flex flex-col justify-between">
-          <div>
-            <span className="text-xs font-bold tracking-widest uppercase text-[#e05a26] mb-2 block">
-              Daily Regimen
-            </span>
-            <h3 className="text-xl font-bold mb-4">The Early Riser</h3>
-            <p className="text-sm leading-relaxed text-[#54433a]/80">
-              While the world sleeps, my terminal is active. I run an early morning schedule, capitalizing on dawn clarity to map complex architectures, write clean APIs, and tackle deep bugs before disruptions can break my focus loop.
-            </p>
-          </div>
-          <div className="mt-6 bg-[#e05a26]/5 p-4 rounded border border-[#e05a26]/10 text-xs italic text-[#54433a]/70 text-center">
-            "Early hours build the most robust systems."
-          </div>
-        </div>
-
-        {/* TILE 3: CHAKRA NATURE (CORE SPECIALTIES) */}
-        <div className="bg-white/40 backdrop-blur-sm p-8 rounded-lg border border-[#54433a]/10 shadow-sm">
-          <span className="text-xs font-bold tracking-widest uppercase text-[#e05a26] mb-2 block">
-            Technical Arsenal
-          </span>
-          <h3 className="text-xl font-bold mb-4">Core Focus</h3>
-          <ul className="space-y-3 text-sm">
-            <li className="flex items-start gap-2">
-              <span className="text-[#e05a26] mt-0.5">✦</span>
-              <span><strong>Distributed Systems:</strong> Event-driven architecture utilizing Apache Kafka.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-[#e05a26] mt-0.5">✦</span>
-              <span><strong>Robust Backends:</strong> Writing optimized architectures via Django, Spring Boot, and Node.js.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-[#e05a26] mt-0.5">✦</span>
-              <span><strong>AI Integrations:</strong> Deep learning onboarding paths and LLM API configurations.</span>
-            </li>
-          </ul>
-        </div>
-
-        {/* TILE 4: OFF-DUTY STRATEGIES (SPORTS, CHESS, BOOKS) - 2 columns on desktop */}
-        <div className="md:col-span-2 bg-white/60 backdrop-blur-sm p-8 rounded-lg border border-[#e05a26]/10 shadow-sm">
-          <span className="text-xs font-bold tracking-widest uppercase text-[#e05a26] mb-2 block">
-            Tactical Off-Duty
-          </span>
-          <h3 className="text-xl font-bold mb-4">Tactical Mindset & Endurance</h3>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
-            <div>
-              <h4 className="font-bold text-[#e05a26] mb-1">Mental & Physical Endurance</h4>
-              <p className="text-[#54433a]/85 leading-relaxed">
-                Outside of code, I train across practically every major outdoor sport, building raw physical persistence. Indoors, I channel that competitive drive into chess, treating it as structural strategy practice for handling dynamic system bottlenecks.
-              </p>
+            {/* Section Header */}
+            <div className="flex items-center gap-2 mb-12">
+                <h2 className="text-3xl font-bold tracking-tight relative">
+                    About Me
+                    <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#e05a26] shadow-[0_0_8px_#e05a26]" />
+                </h2>
+                <div className="h-[1px] bg-[#54433a]/10 flex-grow mt-2" />
             </div>
-            <div>
-              <h4 className="font-bold text-[#e05a26] mb-1">Constant Knowledge Ingestion</h4>
-              <p className="text-[#54433a]/85 leading-relaxed">
-                I maintain an active reading list leaning heavily into self-motivation paradigms and narrative novels. It keeps my critical thinking active and ensures I approach scaling problems with a growth-focused mindset.
-              </p>
-            </div>
-          </div>
-        </div>
 
-      </div>
-    </section>
-  );
+
+            {/* Grid Container */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+                {/* CARD 1: Path & Purpose (Spans 7 cols on md) */}
+                <div className="md:col-span-7 bg-[#fffcf9] border border-[#54433a]/10 rounded-xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <span className="text-xs font-bold tracking-widest uppercase text-[#e05a26]">
+                            The Path & Purpose
+                        </span>
+                        <h3 className="text-2xl font-bold text-[#2b221e] mt-1 mb-4">
+                            Meet Dixit
+                        </h3>
+                        <p className="text-sm leading-relaxed text-[#54433a]/90 mb-4">
+                            I am a Computer Science and Engineering student who loves building things
+                            where code meets reality. My tech obsession started early with a hands-on curiosity, tinkering
+                            with every piece of hardware I could get my hands on. That drive led me through a Diploma
+                            in Information Technology, where I opened the hood to explore Python, electronics, and the Internet of Things (IoT),
+                            and eventually to my Bachelor's degree to deepen my engineering roots.                        </p>
+                        <p className="text-sm leading-relaxed text-[#54433a]/90 mb-6">
+                            What drives me is simple: I look at the world and see countless real-time struggles waiting
+                            to be solved through smart technology. I don't limit myself to just screens;
+                            I bridge the gap between software and hardware. This unique blend keeps me focused on mastering
+                            IoT, Mobile Applications, and Cloud solutions to build connected tech that actually matters.                        </p>
+                    </div>
+
+                    {/* Download Resume Button */}
+                    <div>
+                        <a
+                            href="/Meet_Dixit.pdf"
+                            download="Meet_Dixit.pdf"
+                            className="relative inline-flex items-center gap-3 px-6 py-3 font-bold text-xs tracking-widest uppercase text-white bg-[#e05a26] overflow-hidden transition-all duration-300 shadow-md hover:shadow-[0_0_20px_rgba(224,90,38,0.4)] group border border-[#e05a26]"
+                        >
+                            <span className="absolute inset-0 w-full h-full bg-[#54433a] transition-transform duration-300 ease-out -translate-x-full group-hover:translate-x-0" />
+                            <span className="absolute top-0 left-0 w-8 h-full bg-white/20 transform skew-x-[30deg] transition-transform duration-500 ease-out -translate-x-[200%] group-hover:translate-x-[600%]" />
+                            <span className="relative z-10 flex items-center gap-2">
+                                Download Resume
+                                <svg
+                                    className="w-4 h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-2 group-hover:scale-110"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth="2.5"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                {/* CARD 2: Daily Regimen (Spans 5 cols on md) */}
+                <div className="md:col-span-5 bg-[#fffcf9] border border-[#54433a]/10 rounded-xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <span className="text-xs font-bold tracking-widest uppercase text-[#e05a26]">
+                            Daily Regimen
+                        </span>
+                        <h3 className="text-2xl font-bold text-[#2b221e] mt-1 mb-4">
+                            The Early Riser
+                        </h3>
+                        <p className="text-sm leading-relaxed text-[#54433a]/90">
+                            While the world sleeps, my terminal is active. I run an early morning schedule, capitalizing on dawn clarity to map complex architectures, write clean APIs, and tackle deep bugs before disruptions can break my focus loop.
+                        </p>
+                    </div>
+
+                    <div className="mt-6 p-4 bg-[#fdf0e9] border border-[#e05a26]/20 rounded-lg text-center">
+                        <p className="text-xs italic font-medium text-[#be4d25]">
+                            "Early hours build the most robust systems."
+                        </p>
+                    </div>
+                </div>
+
+                {/* CARD 3: Technical Arsenal (Spans 5 cols on md) */}
+                <div className="md:col-span-5 bg-[#fffcf9] border border-[#54433a]/10 rounded-xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <span className="text-xs font-bold tracking-widest uppercase text-[#e05a26]">
+                            Technical Arsenal
+                        </span>
+                        <h3 className="text-2xl font-bold text-[#2b221e] mt-1 mb-4">
+                            Go-To Stack & Focus
+                        </h3>
+
+                        <div className="space-y-4 text-sm">
+                            <div className="flex items-start gap-2.5">
+                                <span className="text-[#e05a26] font-bold text-base mt-0.5">✦</span>
+                                <p className="text-[#54433a]/90 leading-relaxed">
+                                    <strong className="text-[#2b221e]">Python & Django:</strong> My core preference for building secure, scalable backend architectures, RESTful APIs, and robust database layers.
+                                </p>
+                            </div>
+
+                            <div className="flex items-start gap-2.5">
+                                <span className="text-[#e05a26] font-bold text-base mt-0.5">✦</span>
+                                <p className="text-[#54433a]/90 leading-relaxed">
+                                    <strong className="text-[#2b221e]">React & Tailwind CSS:</strong> My go-to modern web stack for crafting ultra-responsive, modular, and visually refined frontend interfaces.
+                                </p>
+                            </div>
+
+                            <div className="flex items-start gap-2.5">
+                                <span className="text-[#e05a26] font-bold text-base mt-0.5">✦</span>
+                                <p className="text-[#54433a]/90 leading-relaxed">
+                                    <strong className="text-[#2b221e]">AI Integration:</strong> Passionate about bridging software with AI, integrating Gemini APIs, ML classifiers, and intelligent features into real-world applications.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* CARD 4: Tactical Off-Duty (Spans 7 cols on md) */}
+                <div className="md:col-span-7 bg-[#fffcf9] border border-[#54433a]/10 rounded-xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <span className="text-xs font-bold tracking-widest uppercase text-[#e05a26]">
+                            Tactical Off-Duty
+                        </span>
+                        <h3 className="text-2xl font-bold text-[#2b221e] mt-1 mb-4">
+                            Tactical Mindset & Endurance
+                        </h3>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-2">
+                            <div>
+                                <h4 className="font-bold text-sm text-[#e05a26] mb-1">
+                                    Mental & Physical Endurance
+                                </h4>
+                                <p className="text-xs leading-relaxed text-[#54433a]/80">
+                                    Outside of code, I maintain a disciplined physical routine and train consistently. Indoors, I channel strategic focus into chess, treating it as practical practice for handling dynamic system bottlenecks.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-bold text-sm text-[#e05a26] mb-1">
+                                    Constant Knowledge Ingestion
+                                </h4>
+                                <p className="text-xs leading-relaxed text-[#54433a]/80">
+                                    I stay committed to continuous learning across system architectures and emerging tech paradigms. It keeps my problem-solving adaptable and growth-focused.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    );
 }

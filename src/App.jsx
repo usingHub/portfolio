@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import About from './sections/About';
+import Experience from './sections/Experience';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
+import Footer from './components/Footer';
 
 // Your optimized asymmetric Konoha leaf path
 const leafPath = "M17 2C15 2 9 5 6 10C3 15 5 22 5 22C5 22 12 22 17 17C22 12 21 4 17 2Z";
@@ -55,19 +59,15 @@ function App() {
           {/* Primary Profile Module */}
           <About />
           
+          {/* Fully Integrated Interactive Timeline Module */}
+          <Experience />
+          
           {/* Structural section targets for testing build scroll mechanics */}
-          <section id="experience" className="h-[80vh] p-8 border-t border-[#54433a]/5">
-            <h2 className="text-xl font-semibold opacity-30">Experience Section Workspace</h2>
-          </section>
+          <Projects />
           
-          <section id="projects" className="h-[80vh] p-8 border-t border-[#54433a]/5">
-            <h2 className="text-xl font-semibold opacity-30">Projects Section Workspace</h2>
-          </section>
-          
-          <section id="contact" className="h-[80vh] p-8 border-t border-[#54433a]/5">
-            <h2 className="text-xl font-semibold opacity-30">Contact Section Workspace</h2>
-          </section>
+          <Contact />
         </main>
+        <Footer />
       </div>
 
       {/* ================= FOREGROUND CINEMATIC LEAF OVERLAY (z-20) ================= */}
