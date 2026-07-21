@@ -13,7 +13,10 @@ export default function Contact() {
         try {
             // Replace 'YOUR_FORMSPREE_ID' with your private Formspree ID (e.g., xknlqwzy)
             // Your real email address remains completely hidden!
-            const response = await fetch("https://formspree.io/f/xqerlbdd", {
+            const formId = import.meta.env.VITE_FORMSPREE_ID;
+
+            // We construct the URL using a template literal
+            const response = await fetch(`https://formspree.io/f/${formId}`, {
                 method: "POST",
                 body: formData,
                 headers: {
@@ -147,7 +150,7 @@ export default function Contact() {
                                     type="text"
                                     name="name"
                                     required
-                                    placeholder="Naruto Uzumaki"
+                                    placeholder="Meet Dixit"
                                     className="w-full px-4 py-3 bg-[#fffcf9] border border-[#54433a]/20 rounded-lg text-sm text-[#2b221e] focus:outline-none focus:border-[#e05a26] focus:ring-1 focus:ring-[#e05a26] transition-all"
                                 />
                             </div>
@@ -161,7 +164,7 @@ export default function Contact() {
                                     type="email"
                                     name="email"
                                     required
-                                    placeholder="ninja@konoha.io"
+                                    placeholder="your.email@example.com"
                                     className="w-full px-4 py-3 bg-[#fffcf9] border border-[#54433a]/20 rounded-lg text-sm text-[#2b221e] focus:outline-none focus:border-[#e05a26] focus:ring-1 focus:ring-[#e05a26] transition-all"
                                 />
                             </div>
