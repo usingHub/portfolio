@@ -10,7 +10,7 @@ export default function Projects() {
       category: "Distributed Systems & Streaming",
       description: "Real-time event-driven financial monitoring system built with a microservices architecture. Streams live Bitcoin price data through Apache Kafka for real-time processing and persistent storage in PostgreSQL.",
       tags: ["Python", "Apache Kafka", "PostgreSQL", "Docker", "Microservices"],
-      github: "https://github.com/usingHub/sentinel",
+      github: "https://github.com/usingHub/sentinel-",
       demo: "",
       featured: true
     },
