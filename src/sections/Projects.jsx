@@ -46,16 +46,16 @@ export default function Projects() {
       category: "Applied AI / Machine Learning",
       description: "Full-stack web application integrating a trained Machine Learning classifier into Django to analyze text input and provide real-time news credibility verification via a minimal submission interface.",
       tags: ["Python", "Django", "Scikit-Learn", "Machine Learning", "NLP"],
-      github: "https://github.com/usingHub/Fake-News-Detection-App",
+      github: "https://github.com/usingHub/fake-news-detection",
       demo: "",
       featured: false
     },
     {
-      title: "FinMentor",
-      category: "Database-Driven Web Platform",
-      description: "Dynamic financial expert directory and profile platform. Converted static layouts into data-driven components using parameterized MySQL queries, custom vanilla JS carousels, FAQ accordions, and QR popups.",
-      tags: ["PHP", "MySQL", "JavaScript", "HTML5/CSS3", "UX Design"],
-      github: "https://github.com/usingHub/FinMentor",
+      title: "TalentIntelligence",
+      category: "Full-Stack & AI Systems",
+      description: "AI-driven recruitment and talent evaluation platform engineered with a scalable backend and responsive frontend interface to streamline candidate assessment, resume analytics, and hiring workflows.",
+      tags: ["Python", "FastAPI", "React", "Tailwind CSS", "REST API"],
+      github: "https://github.com/usingHub/talentIntelligence",
       demo: "",
       featured: false
     }
@@ -67,14 +67,13 @@ export default function Projects() {
       className="scroll-mt-24 py-20 px-4 md:px-8 max-w-5xl mx-auto text-[#54433a]"
     >
       {/* Section Header */}
-       <div className="flex items-center gap-2 mb-12">
-                <h2 className="text-3xl font-bold tracking-tight relative">
-                    Featured Projects 
-                    <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#e05a26] shadow-[0_0_8px_#e05a26]" />
-                </h2>
-                <div className="h-[1px] bg-[#54433a]/10 flex-grow mt-2" />
-        </div>
-
+      <div className="flex items-center gap-2 mb-12">
+        <h2 className="text-3xl font-bold tracking-tight relative">
+          Featured Projects 
+          <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#e05a26] shadow-[0_0_8px_#e05a26]" />
+        </h2>
+        <div className="h-[1px] bg-[#54433a]/10 flex-grow mt-2" />
+      </div>
 
       {/* 2x3 Grid Container */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
