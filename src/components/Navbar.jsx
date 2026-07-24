@@ -36,6 +36,7 @@ export default function Navbar({ activeSection }) {
     { name: 'About Me', href: '#about', id: 'about' },
     { name: 'Experience', href: '#experience', id: 'experience' },
     { name: 'Projects', href: '#projects', id: 'projects' },
+    { name: 'Certificates', href: '#certifications', id: 'certifications' },
     { name: 'Contact Me', href: '#contact', id: 'contact' },
   ];
 
@@ -46,7 +47,7 @@ export default function Navbar({ activeSection }) {
       }`}
     >
       {/* The Main Scroll Container */}
-      <div className="relative max-w-5xl mx-auto bg-white border-y-2 border-[#e05a26]/20 shadow-md h-14 flex items-center justify-between px-10 transition-all duration-300">
+      <div className="relative max-w-5xl mx-auto bg-white border-y-2 border-[#e05a26]/20 shadow-md h-14 flex items-center justify-between px-6 md:px-10 transition-all duration-300">
         
         {/* ================= LEFT SCROLL ROLLER ================= */}
         <div className="absolute -left-2 top-1/2 -translate-y-1/2 flex flex-col items-center">
@@ -62,10 +63,10 @@ export default function Navbar({ activeSection }) {
         </div>
 
         {/* Left Layout Spacer */}
-        <div className="hidden md:flex w-24" />
+        <div className="hidden md:flex w-16" />
 
         {/* CENTERED NAVIGATION LINKS */}
-        <nav className="flex items-center gap-6 mx-auto md:mx-0">
+        <nav className="flex items-center gap-3 sm:gap-4 md:gap-6 mx-auto md:mx-0 overflow-x-auto no-scrollbar">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             
@@ -73,7 +74,7 @@ export default function Navbar({ activeSection }) {
               <a
                 key={link.name}
                 href={link.href}
-                className={`relative text-sm font-semibold transition-colors duration-200 py-1 group ${
+                className={`relative text-xs sm:text-sm font-semibold transition-colors duration-200 py-1 whitespace-nowrap group ${
                   isActive 
                     ? 'text-[#e05a26] drop-shadow-[0_0_4px_rgba(224,90,38,0.15)]' 
                     : 'text-[#54433a] hover:text-[#e05a26]'
@@ -81,7 +82,6 @@ export default function Navbar({ activeSection }) {
               >
                 {link.name}
                 {/* Chakra Glow Underline Animation */}
-                {/* If active, it stays locked at w-full. If inactive, it expands smoothly on hover. */}
                 <span 
                   className={`absolute bottom-0 left-0 h-[2px] bg-[#e05a26] transition-all duration-300 shadow-[0_0_8px_#e05a26] ${
                     isActive ? 'w-full opacity-100' : 'w-0 group-hover:w-full'
@@ -93,7 +93,7 @@ export default function Navbar({ activeSection }) {
         </nav>
 
         {/* RIGHT SIDE: SOCIAL ICONS */}
-        <div className="flex items-center gap-5 w-24 justify-end">
+        <div className="flex items-center gap-3 sm:gap-4 md:gap-5 w-16 md:w-24 justify-end shrink-0">
           {/* Fixed GitHub Icon */}
           <a
             href="https://github.com/usingHub"

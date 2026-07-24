@@ -5,6 +5,7 @@ import Experience from './sections/Experience';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
+import Certifcates from './components/Certificates';
 
 // Your optimized asymmetric Konoha leaf path
 const leafPath = "M17 2C15 2 9 5 6 10C3 15 5 22 5 22C5 22 12 22 17 17C22 12 21 4 17 2Z";
@@ -14,7 +15,8 @@ function App() {
 
   useEffect(() => {
     // Monitored structural layout elements for the navigation spy
-    const sectionIds = ['about', 'experience', 'projects', 'contact'];
+    // FIX: Added 'certifications' to the list below
+    const sectionIds = ['about', 'experience', 'projects', 'certifications', 'contact'];
     
     const observerOptions = {
       root: null, // evaluates relative to the viewport
@@ -64,6 +66,8 @@ function App() {
           
           {/* Structural section targets for testing build scroll mechanics */}
           <Projects />
+
+          <Certifcates />
           
           <Contact />
         </main>
@@ -71,8 +75,6 @@ function App() {
       </div>
 
       {/* ================= FOREGROUND CINEMATIC LEAF OVERLAY (z-20) ================= */}
-      {/* Kept at z-20 so your custom leaves pass in front of text cards for beautiful layering.
-          pointer-events-none guarantees text selections and links stay fully interactive. */}
       <div className="fixed inset-0 pointer-events-none z-20 overflow-hidden">
 
         {/* Floating Leaf 1 - Terracotta Accent */}
@@ -80,9 +82,7 @@ function App() {
           <path d={leafPath} />
         </svg>
 
-        {/* Floating Leaf 2 - Micro Bokeh Pass
-            Added a tiny 1px blur filter here so this mid-size leaf feels like it's skimming closer 
-            to the focal screen layer without losing its sharp custom layout geometry! */}
+        {/* Floating Leaf 2 - Micro Bokeh Pass */}
         <svg className="absolute top-0 left-[75%] w-5 h-5 text-[#be4d25] fill-current animate-leaf-medium" style={{ animationDelay: '4s', filter: 'blur(1px)' }} viewBox="0 0 24 24">
           <path d={leafPath} />
         </svg>
