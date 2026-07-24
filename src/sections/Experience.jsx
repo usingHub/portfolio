@@ -4,13 +4,13 @@ export default function Experience() {
     const experiences = [
         {
             role: "AI/ML Engineering Trainee",
-            company: "bEdge Tech Services", // Updated from resume
+            company: "bEdge Tech Services",
             duration: "June 2026 – July 2026",
             details: [
                 "Structured tailored technical training tracks and candidate onboarding paths using Python and TensorFlow. //",
                 "Implemented resume-aligned tool deep-dives and resolved individual core competency gaps to accelerate team productivity. //",
-                "Guided end-to-end project development with scalable ML architectures and pipeline optimization utilities, improving real-world application deployment readiness. //[cite: 1]",
-                "Integrated advanced technical features including automated data preprocessing modules, model evaluation metrics, and secure API endpoints. //[cite: 1]"
+                "Guided end-to-end project development with scalable ML architectures and pipeline optimization utilities, improving real-world application deployment readiness. //",
+                "Integrated advanced technical features including automated data preprocessing modules, model evaluation metrics, and secure API endpoints. //"
             ]
         },
         {
@@ -25,30 +25,30 @@ export default function Experience() {
         },
         {
             role: "Backend Developer (Hackathon Participant)",
-            company: "GTU Ideathon", // Updated to highlight specific backend contributions[cite: 1]
-            duration: "April 2025", // Exact date aligned from certifications[cite: 1]
+            company: "GTU Ideathon",
+            duration: "April 2025",
             details: [
-                "Engineered RESTful backend APIs and scalable infrastructure using Node.js for Agri-Sakha, a dedicated farmer-centric digital platform. //[cite: 1]",
-                "Architected and integrated a fully agriculture-focused AI chatbot backend leveraging the Google Gemini language model API. //[cite: 1]",
-                "Collaborated seamlessly within a two-person team, managing full server-side delivery while a teammate constructed the frontend presentation layers. //[cite: 1]",
-                "Ensured highly performant, real-time conversational support workflows and built robust error handling networks to elevate user experience. //[cite: 1]"
+                "Engineered RESTful backend APIs and scalable infrastructure using Node.js for Agri-Sakha, a dedicated farmer-centric digital platform. //",
+                "Architected and integrated a fully agriculture-focused AI chatbot backend leveraging the Google Gemini language model API. //",
+                "Collaborated seamlessly within a two-person team, managing full server-side delivery while a teammate constructed the frontend presentation layers. //",
+                "Ensured highly performant, real-time conversational support workflows and built robust error handling networks to elevate user experience. //"
             ]
         },
         {
             role: "Freelance Full-Stack Developer",
-            company: "FinMentor", // Updated from resume[cite: 1]
-            duration: "August 2025", // Aligned with resume chronology[cite: 1]
+            company: "FinMentor",
+            duration: "August 2025",
             details: [
-                "Developed dynamic, data-driven expert directory hubs and personalized profile pages leveraging a PHP and MySQL infrastructure. //[cite: 1]",
-                "Implemented secure parameterized queries to safe-guard data transmission and resolved underlying routing and UX bugs to optimize client workflows. //[cite: 1]",
-                "Redesigned interface components with responsive fluid breakpoints and vanilla JavaScript utilities, improving mobile usability. //[cite: 1]",
-                "Built dynamic UI features including interactive media carousels, responsive FAQ accordions, and custom QR popups. //[cite: 1]"
+                "Developed dynamic, data-driven expert directory hubs and personalized profile pages leveraging a PHP and MySQL infrastructure. //",
+                "Implemented secure parameterized queries to safe-guard data transmission and resolved underlying routing and UX bugs to optimize client workflows. //",
+                "Redesigned interface components with responsive fluid breakpoints and vanilla JavaScript utilities, improving mobile usability. //",
+                "Built dynamic UI features including interactive media carousels, responsive FAQ accordions, and custom QR popups. //"
             ]
         },
         {
             role: "Hackathon Participant",
             company: "Gujarat Vibrant Hackathon",
-            duration: "November 2023", // Aligned with achievements[cite: 1]
+            duration: "November 2023",
             details: [
                 "Engineered a web application using PHP designed to address the socio-educational challenge of tracking student dropout ratios.",
                 "Developed a multi-parameter filtering system that processed demographic inputs (such as region, area, and age groups) to isolate and list specific students who had left the school ecosystem.",
@@ -70,51 +70,108 @@ export default function Experience() {
     return (
         <section
             id="experience"
-            className="scroll-mt-24 py-20 px-4 md:px-8 max-w-5xl mx-auto text-[#54433a]"
+            className="scroll-mt-24 py-20 px-4 md:px-8 max-w-5xl mx-auto text-[#54433a] dark:text-[#d1c7bc]"
         >
-            {/* Consistent Section Header Asset Layout */}
-            <div className="flex items-center gap-2 mb-12">
-                <h2 className="text-3xl font-bold tracking-tight relative">
+            {/* Section Header */}
+            <div className="flex items-center gap-2 mb-16">
+                <h2 className="text-3xl font-bold tracking-tight relative text-[#2b221e] dark:text-[#faf8f5]">
                     Experience & Milestones
-                    <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#e05a26] shadow-[0_0_8px_#e05a26]" />
+                    <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#e05a26] dark:bg-[#f59e0b] shadow-[0_0_8px_#e05a26] dark:shadow-[0_0_8px_#f59e0b]" />
                 </h2>
-                <div className="h-[1px] bg-[#54433a]/10 flex-grow mt-2" />
+                <div className="h-[1px] bg-[#54433a]/10 dark:bg-[#d1c7bc]/10 flex-grow mt-2" />
             </div>
 
-            {/* The Timeline Container */}
-            <div className="relative border-l-2 border-[#54433a]/20 ml-4 md:ml-8 pl-8 space-y-12">
-                {experiences.map((exp, index) => (
-                    <div key={index} className="relative group">
+            {/* Zigzag Timeline Wrapper */}
+            <div className="relative">
+                {/* Central Scroll Spine / Timeline Line */}
+                <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2 bg-gradient-to-b from-[#e05a26] via-[#54433a]/20 to-[#e05a26] dark:from-[#f59e0b] dark:via-[#d1c7bc]/20 dark:to-[#f59e0b]" />
 
-                        {/* Diamond Node */}
-                        <div className="absolute -left-[41px] top-1.5 w-4 h-4 bg-[#e05a26] border-2 border-[#fffcf9] rotate-45 transform transition-transform duration-300 group-hover:scale-125 group-hover:bg-[#54433a]" />
+                <div className="space-y-10 md:space-y-12">
+                    {experiences.map((exp, index) => {
+                        const isEven = index % 2 === 0;
 
-                        {/* Timeline Meta Info */}
-                        <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-1 mb-3">
-                            <h3 className="text-xl font-bold tracking-tight text-[#54433a] group-hover:text-[#e05a26] transition-colors duration-200">
-                                {exp.role} <span className="text-[#e05a26]/80 font-medium text-lg">@ {exp.company}</span>
-                            </h3>
-                            <span className="text-xs font-bold tracking-wider uppercase text-[#54433a]/60 bg-[#54433a]/5 px-2.5 py-1 inline-block self-start md:self-auto">
-                                {exp.duration}
-                            </span>
-                        </div>
+                        return (
+                            <div 
+                                key={index} 
+                                className={`relative flex flex-col md:flex-row items-start ${
+                                    isEven ? 'md:flex-row-reverse' : ''
+                                } group`}
+                            >
+                                {/* Center Ninja Node (Rotating Diamond with Glow) */}
+                                <div className="absolute left-4 md:left-1/2 top-6 -translate-x-1/2 z-20 flex items-center justify-center">
+                                    <div className="w-5 h-5 bg-[#fffcf9] dark:bg-[#221b18] border-2 border-[#e05a26] dark:border-[#f59e0b] rotate-45 transform transition-all duration-300 group-hover:scale-125 group-hover:bg-[#e05a26] dark:group-hover:bg-[#f59e0b] group-hover:shadow-[0_0_12px_#e05a26] dark:group-hover:shadow-[0_0_12px_#f59e0b] flex items-center justify-center">
+                                        <div className="w-1.5 h-1.5 bg-[#e05a26] dark:bg-[#f59e0b] group-hover:bg-[#fffcf9] dark:group-hover:bg-[#221b18] transition-colors" />
+                                    </div>
+                                </div>
 
-                        {/* Accomplishment Lists */}
-                        <ul className="space-y-2 list-none pl-0">
-                            {exp.details.map((detail, idx) => {
-                                // Stripping out internal developer documentation comments before printing to DOM
-                                const cleanText = detail.split('//')[0].trim();
-                                return (
-                                    <li key={idx} className="relative pl-5 text-sm leading-relaxed text-[#54433a]/80">
-                                        <span className="absolute left-0 top-2.5 w-2 h-[2px] bg-[#e05a26]/60" />
-                                        {cleanText}
-                                    </li>
-                                );
-                            })}
-                        </ul>
+                                {/* Content Card Slot (Takes half width on desktop) */}
+                                <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${
+                                    isEven ? 'md:pr-10 md:text-right' : 'md:pl-10 md:text-left'
+                                }`}>
+                                    {/* The Interactive Scroll Card */}
+                                    <div className="relative bg-[#fffcf9] dark:bg-[#221b18] border border-[#54433a]/15 dark:border-[#54433a]/30 rounded-xl p-5 shadow-sm transition-all duration-300 hover:border-[#e05a26]/60 dark:hover:border-[#f59e0b]/60 hover:shadow-[0_12px_30px_-10px_rgba(224,90,38,0.2)] dark:hover:shadow-[0_12px_30px_-10px_rgba(245,158,11,0.2)] overflow-hidden cursor-pointer">
+                                        
+                                        {/* Katana Edge Line Accent */}
+                                        <div className={`absolute top-0 bottom-0 w-[3px] bg-[#e05a26] dark:bg-[#f59e0b] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                                            isEven ? 'md:right-0 md:left-auto left-0' : 'left-0'
+                                        }`} />
 
-                    </div>
-                ))}
+                                        {/* Header Info (Always Visible) */}
+                                        <div>
+                                            <div className={`flex flex-wrap items-center gap-2 mb-2 ${
+                                                isEven ? 'md:justify-end' : 'justify-start'
+                                            }`}>
+                                                <span className="text-xs font-extrabold tracking-wider uppercase text-[#e05a26] dark:text-[#f59e0b] bg-[#e05a26]/10 dark:bg-[#f59e0b]/10 px-2.5 py-0.5 rounded">
+                                                    {exp.duration}
+                                                </span>
+                                            </div>
+
+                                            <h3 className="text-lg font-bold tracking-tight text-[#2b221e] dark:text-[#faf8f5] group-hover:text-[#e05a26] dark:group-hover:text-[#f59e0b] transition-colors duration-200">
+                                                {exp.role}
+                                            </h3>
+                                            <p className="text-sm font-semibold text-[#54433a]/80 dark:text-[#d1c7bc] mb-3">
+                                                @ {exp.company}
+                                            </p>
+
+                                            {/* Interactive Hover Hint */}
+                                            <div className={`flex items-center gap-1.5 text-[11px] font-bold text-[#e05a26]/70 dark:text-[#f59e0b]/70 group-hover:text-[#e05a26] dark:group-hover:text-[#f59e0b] transition-colors ${
+                                                isEven ? 'md:justify-end' : 'justify-start'
+                                            }`}>
+                                                <span>Hover to inspect scroll</span>
+                                                <svg className="w-3.5 h-3.5 transform transition-transform duration-300 group-hover:translate-y-0.5 group-hover:rotate-180 fill-current" viewBox="0 0 24 24">
+                                                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        {/* Smooth Hover-Reveal Accordion for Accomplishments */}
+                                        <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+                                            <div className="overflow-hidden">
+                                                <div className="pt-3 mt-3 border-t border-[#54433a]/10 dark:border-[#54433a]/30">
+                                                    <ul className="space-y-2 list-none pl-0 text-left">
+                                                        {exp.details.map((detail, idx) => {
+                                                            const cleanText = detail.split('//')[0].trim();
+                                                            return (
+                                                                <li key={idx} className="relative pl-4 text-xs leading-relaxed text-[#54433a]/90 dark:text-[#d1c7bc]">
+                                                                    <span className="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-[#e05a26] dark:bg-[#f59e0b]" />
+                                                                    {cleanText}
+                                                                </li>
+                                                            );
+                                                        })}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                {/* Empty Spacer for layout balance on desktop */}
+                                <div className="hidden md:block w-1/2" />
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         </section>
     );

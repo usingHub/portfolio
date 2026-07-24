@@ -47,7 +47,7 @@ export default function Navbar({ activeSection }) {
       }`}
     >
       {/* The Main Scroll Container */}
-      <div className="relative max-w-5xl mx-auto bg-white border-y-2 border-[#e05a26]/20 shadow-md h-14 flex items-center justify-between px-6 md:px-10 transition-all duration-300">
+      <div className="relative max-w-5xl mx-auto bg-white dark:bg-[#221b18] border-y-2 border-[#e05a26]/20 dark:border-[#e05a26]/30 shadow-md h-14 flex items-center justify-between px-6 md:px-10 transition-all duration-300">
         
         {/* ================= LEFT SCROLL ROLLER ================= */}
         <div className="absolute -left-2 top-1/2 -translate-y-1/2 flex flex-col items-center">
@@ -76,14 +76,14 @@ export default function Navbar({ activeSection }) {
                 href={link.href}
                 className={`relative text-xs sm:text-sm font-semibold transition-colors duration-200 py-1 whitespace-nowrap group ${
                   isActive 
-                    ? 'text-[#e05a26] drop-shadow-[0_0_4px_rgba(224,90,38,0.15)]' 
-                    : 'text-[#54433a] hover:text-[#e05a26]'
+                    ? 'text-[#e05a26] dark:text-[#f59e0b] drop-shadow-[0_0_4px_rgba(224,90,38,0.15)]' 
+                    : 'text-[#54433a] dark:text-[#d1c7bc] hover:text-[#e05a26] dark:hover:text-[#f59e0b]'
                 }`}
               >
                 {link.name}
                 {/* Chakra Glow Underline Animation */}
                 <span 
-                  className={`absolute bottom-0 left-0 h-[2px] bg-[#e05a26] transition-all duration-300 shadow-[0_0_8px_#e05a26] ${
+                  className={`absolute bottom-0 left-0 h-[2px] bg-[#e05a26] dark:bg-[#f59e0b] transition-all duration-300 shadow-[0_0_8px_#e05a26] dark:shadow-[0_0_8px_#f59e0b] ${
                     isActive ? 'w-full opacity-100' : 'w-0 group-hover:w-full'
                   }`} 
                 />
@@ -99,7 +99,7 @@ export default function Navbar({ activeSection }) {
             href="https://github.com/usingHub"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#54433a] hover:text-[#e05a26] transition-colors duration-200"
+            className="text-[#54433a] dark:text-[#faf8f5] hover:text-[#e05a26] dark:hover:text-[#f59e0b] transition-colors duration-200"
             aria-label="GitHub"
           >
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -112,7 +112,7 @@ export default function Navbar({ activeSection }) {
             href="https://www.linkedin.com/in/meet-dixit/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#54433a] hover:text-[#e05a26] transition-colors duration-200"
+            className="text-[#54433a] dark:text-[#faf8f5] hover:text-[#e05a26] dark:hover:text-[#f59e0b] transition-colors duration-200"
             aria-label="LinkedIn"
           >
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">

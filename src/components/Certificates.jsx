@@ -65,21 +65,20 @@ export default function Certifications() {
       fileUrl: "/certificates/project development using java.pdf",
       skills: ["Java", "Software Engineering", "Project Lifecycle"]
     },
-    
   ];
 
   return (
     <section 
       id="certifications" 
-      className="scroll-mt-24 py-20 px-4 md:px-8 max-w-5xl mx-auto text-[#54433a]"
+      className="scroll-mt-24 py-20 px-4 md:px-8 max-w-5xl mx-auto text-[#54433a] dark:text-[#d1c7bc]"
     >
       {/* Section Header */}
       <div className="flex items-center gap-2 mb-12">
-        <h2 className="text-3xl font-bold tracking-tight relative">
+        <h2 className="text-3xl font-bold tracking-tight relative text-[#2b221e] dark:text-[#faf8f5]">
           Certifications & Badges
-          <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#e05a26] shadow-[0_0_8px_#e05a26]" />
+          <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#e05a26] dark:bg-[#f59e0b] shadow-[0_0_8px_#e05a26] dark:shadow-[0_0_8px_#f59e0b]" />
         </h2>
-        <div className="h-[1px] bg-[#54433a]/10 flex-grow mt-2" />
+        <div className="h-[1px] bg-[#54433a]/10 dark:bg-[#d1c7bc]/10 flex-grow mt-2" />
       </div>
 
       {/* Grid Container */}
@@ -87,13 +86,13 @@ export default function Certifications() {
         {certifications.map((cert, index) => (
           <div 
             key={index} 
-            className="group relative bg-[#fffcf9] border border-[#54433a]/15 rounded-xl p-6 flex flex-col justify-between overflow-hidden transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#e05a26]/50 hover:shadow-[0_12px_30px_-10px_rgba(224,90,38,0.18)]"
+            className="group relative bg-[#fffcf9] dark:bg-[#221b18] border border-[#54433a]/15 dark:border-[#54433a]/30 rounded-xl p-6 flex flex-col justify-between overflow-hidden transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#e05a26]/50 dark:hover:border-[#f59e0b]/50 hover:shadow-[0_12px_30px_-10px_rgba(224,90,38,0.18)] dark:hover:shadow-[0_12px_30px_-10px_rgba(245,158,11,0.18)]"
           >
             {/* KATANA EDGE ACCENT */}
-            <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#e05a26] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-l-xl" />
+            <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#e05a26] dark:bg-[#f59e0b] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-l-xl" />
 
             {/* KONOHA LEAF WATERMARK */}
-            <div className="absolute -top-1 -right-1 pointer-events-none opacity-[0.03] group-hover:opacity-[0.16] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out text-[#e05a26]">
+            <div className="absolute -top-1 -right-1 pointer-events-none opacity-[0.03] dark:opacity-[0.05] group-hover:opacity-[0.16] dark:group-hover:opacity-[0.25] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 ease-out text-[#e05a26] dark:text-[#f59e0b]">
               <svg className="w-20 h-20 fill-current" viewBox="0 0 24 24">
                 <path d={konohaLeafPath} />
               </svg>
@@ -103,25 +102,25 @@ export default function Certifications() {
             <div className="relative z-10">
               {/* Meta Info: Issuer */}
               <div className="flex items-center justify-between gap-2 mb-3">
-                <span className="text-xs font-extrabold tracking-widest uppercase text-[#e05a26] flex items-center gap-1.5">
-                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#e05a26] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                <span className="text-xs font-extrabold tracking-widest uppercase text-[#e05a26] dark:text-[#f59e0b] flex items-center gap-1.5">
+                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#e05a26] dark:bg-[#f59e0b] opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                   {cert.issuer}
                 </span>
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-[#2b221e] group-hover:text-[#e05a26] transition-colors duration-200 mb-4">
+              <h3 className="text-xl font-bold text-[#2b221e] dark:text-[#faf8f5] group-hover:text-[#e05a26] dark:group-hover:text-[#f59e0b] transition-colors duration-200 mb-4">
                 {cert.title}
               </h3>
             </div>
 
             {/* Bottom Row: Skill Badges + View Button */}
-            <div className="relative z-10 pt-4 border-t border-[#54433a]/10 flex items-center justify-between gap-2">
+            <div className="relative z-10 pt-4 border-t border-[#54433a]/10 dark:border-[#54433a]/30 flex items-center justify-between gap-2">
               <div className="flex flex-wrap gap-1.5">
                 {cert.skills.map((skill, sIdx) => (
                   <span 
                     key={sIdx} 
-                    className="text-[11px] font-semibold px-2 py-0.5 bg-[#54433a]/5 text-[#2b221e] rounded border border-[#54433a]/10 group-hover:bg-[#fdf0e9] group-hover:border-[#e05a26]/20 transition-all duration-300"
+                    className="text-[11px] font-semibold px-2 py-0.5 bg-[#54433a]/5 dark:bg-[#54433a]/20 text-[#2b221e] dark:text-[#d1c7bc] rounded border border-[#54433a]/10 dark:border-[#54433a]/30 group-hover:bg-[#fdf0e9] dark:group-hover:bg-[#2c221e] group-hover:border-[#e05a26]/20 dark:group-hover:border-[#f59e0b]/20 dark:group-hover:text-[#f59e0b] transition-all duration-300"
                   >
                     {skill}
                   </span>
@@ -134,7 +133,7 @@ export default function Certifications() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   aria-label={`View certificate for ${cert.title}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-extrabold text-[#e05a26] shrink-0 ml-2 bg-[#e05a26]/10 px-2.5 py-1.5 rounded-md hover:bg-[#e05a26] hover:text-white transition-all duration-200"
+                  className="inline-flex items-center gap-1.5 text-xs font-extrabold text-[#e05a26] dark:text-[#f59e0b] shrink-0 ml-2 bg-[#e05a26]/10 dark:bg-[#f59e0b]/10 px-2.5 py-1.5 rounded-md hover:bg-[#e05a26] dark:hover:bg-[#f59e0b] hover:text-white dark:hover:text-[#181311] transition-all duration-200"
                 >
                   <span>View</span>
                   <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
