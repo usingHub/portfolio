@@ -104,19 +104,19 @@ export default function Experience() {
                                     </div>
                                 </div>
 
-                                {/* Content Card Slot (Takes half width on desktop) */}
+                                {/* Content Card Slot */}
                                 <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${
                                     isEven ? 'md:pr-10 md:text-right' : 'md:pl-10 md:text-left'
                                 }`}>
                                     {/* The Interactive Scroll Card */}
-                                    <div className="relative bg-[#fffcf9] dark:bg-[#221b18] border border-[#54433a]/15 dark:border-[#54433a]/30 rounded-xl p-5 shadow-sm transition-all duration-300 hover:border-[#e05a26]/60 dark:hover:border-[#f59e0b]/60 hover:shadow-[0_12px_30px_-10px_rgba(224,90,38,0.2)] dark:hover:shadow-[0_12px_30px_-10px_rgba(245,158,11,0.2)] overflow-hidden cursor-pointer">
+                                    <div className="relative bg-[#fffcf9] dark:bg-[#221b18] border border-[#54433a]/15 dark:border-[#54433a]/30 rounded-xl p-5 shadow-sm transition-all duration-300 hover:border-[#e05a26]/60 dark:hover:border-[#f59e0b]/60 hover:shadow-[0_12px_30px_-10px_rgba(224,90,38,0.2)] dark:hover:shadow-[0_12px_30px_-10px_rgba(245,158,11,0.2)] overflow-hidden">
                                         
                                         {/* Katana Edge Line Accent */}
                                         <div className={`absolute top-0 bottom-0 w-[3px] bg-[#e05a26] dark:bg-[#f59e0b] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
                                             isEven ? 'md:right-0 md:left-auto left-0' : 'left-0'
                                         }`} />
 
-                                        {/* Header Info (Always Visible) */}
+                                        {/* Header Info */}
                                         <div>
                                             <div className={`flex flex-wrap items-center gap-2 mb-2 ${
                                                 isEven ? 'md:justify-end' : 'justify-start'
@@ -133,8 +133,8 @@ export default function Experience() {
                                                 @ {exp.company}
                                             </p>
 
-                                            {/* Interactive Hover Hint */}
-                                            <div className={`flex items-center gap-1.5 text-[11px] font-bold text-[#e05a26]/70 dark:text-[#f59e0b]/70 group-hover:text-[#e05a26] dark:group-hover:text-[#f59e0b] transition-colors ${
+                                            {/* Interactive Hover Hint (Hidden on mobile, visible on desktop) */}
+                                            <div className={`hidden md:flex items-center gap-1.5 text-[11px] font-bold text-[#e05a26]/70 dark:text-[#f59e0b]/70 group-hover:text-[#e05a26] dark:group-hover:text-[#f59e0b] transition-colors ${
                                                 isEven ? 'md:justify-end' : 'justify-start'
                                             }`}>
                                                 <span>Hover to inspect scroll</span>
@@ -144,8 +144,8 @@ export default function Experience() {
                                             </div>
                                         </div>
 
-                                        {/* Smooth Hover-Reveal Accordion for Accomplishments */}
-                                        <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+                                        {/* Details Accordion: Always expanded on mobile (grid-rows-[1fr]), collapsible on desktop (md:grid-rows-[0fr]) */}
+                                        <div className="grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
                                             <div className="overflow-hidden">
                                                 <div className="pt-3 mt-3 border-t border-[#54433a]/10 dark:border-[#54433a]/30">
                                                     <ul className="space-y-2 list-none pl-0 text-left">

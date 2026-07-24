@@ -3,10 +3,14 @@ import React, { useState, useEffect } from 'react';
 export default function Navbar({ activeSection }) {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+
+      // Close mobile menu on scroll
+      setIsMobileMenuOpen(false);
 
       // 1. Always keep navbar visible at the very top of the page
       if (currentScrollY < 10) {
@@ -62,11 +66,20 @@ export default function Navbar({ activeSection }) {
           <div className="w-4 h-1.5 bg-gradient-to-r from-[#d97706] to-[#f59e0b] rounded-b-sm shadow-sm" />
         </div>
 
-        {/* Left Layout Spacer */}
+        {/* Left Layout Spacer for Desktop */}
         <div className="hidden md:flex w-16" />
 
-        {/* CENTERED NAVIGATION LINKS */}
-        <nav className="flex items-center gap-3 sm:gap-4 md:gap-6 mx-auto md:mx-0 overflow-x-auto no-scrollbar">
+        {/* Mobile Brand / Leaf Title (Visible only on mobile view) */}
+        <a 
+          href="#about" 
+          className="flex md:hidden items-center gap-1.5 text-xs font-extrabold text-[#e05a26] dark:text-[#f59e0b] tracking-wider uppercase"
+        >
+          
+          <span className="text-[#2b221e] dark:text-[#faf8f5]">Meet Dixit</span>
+        </a>
+
+        {/* CENTERED NAVIGATION LINKS (Desktop View) */}
+        <nav className="hidden md:flex items-center gap-3 sm:gap-4 md:gap-6 mx-auto md:mx-0 overflow-x-auto no-scrollbar">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             
@@ -92,8 +105,8 @@ export default function Navbar({ activeSection }) {
           })}
         </nav>
 
-        {/* RIGHT SIDE: SOCIAL ICONS */}
-        <div className="flex items-center gap-3 sm:gap-4 md:gap-5 w-16 md:w-24 justify-end shrink-0">
+        {/* RIGHT SIDE: SOCIAL ICONS & MOBILE TOGGLE */}
+        <div className="flex items-center gap-3 sm:gap-4 md:gap-5 w-auto md:w-24 justify-end shrink-0">
           {/* Fixed GitHub Icon */}
           <a
             href="https://github.com/usingHub"
@@ -119,6 +132,23 @@ export default function Navbar({ activeSection }) {
               <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
             </svg>
           </a>
+
+          {/* Mobile Hamburger / Close Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-1 text-[#54433a] dark:text-[#faf8f5] hover:text-[#e05a26] dark:hover:text-[#f59e0b] focus:outline-none transition-colors cursor-pointer"
+            aria-label="Toggle Navigation Menu"
+          >
+            <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              {isMobileMenuOpen ? (
+                /* Close Icon (X) */
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+              ) : (
+                /* Hamburger Icon */
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+              )}
+            </svg>
+          </button>
         </div>
 
         {/* ================= RIGHT SCROLL ROLLER ================= */}
@@ -133,6 +163,39 @@ export default function Navbar({ activeSection }) {
           <div className="w-4 h-1.5 bg-gradient-to-r from-[#d97706] to-[#f59e0b] rounded-b-sm shadow-sm" />
         </div>
 
+      </div>
+
+      {/* ================= MOBILE MENU DROPDOWN DRAWER ================= */}
+      <div
+        className={`md:hidden max-w-5xl mx-auto mt-2 bg-white dark:bg-[#221b18] border-2 border-[#e05a26]/30 dark:border-[#e05a26]/40 rounded-xl shadow-xl overflow-hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen
+            ? 'max-h-80 opacity-100 py-3 px-6'
+            : 'max-h-0 opacity-0 py-0 px-6 border-none'
+        }`}
+      >
+        <div className="flex flex-col gap-1">
+          {navLinks.map((link, idx) => {
+            const isActive = activeSection === link.id;
+            return (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`flex items-center justify-between py-2.5 text-sm font-semibold transition-colors duration-200 border-b border-[#54433a]/10 dark:border-[#54433a]/20 last:border-none ${
+                  isActive
+                    ? 'text-[#e05a26] dark:text-[#f59e0b] font-bold'
+                    : 'text-[#54433a] dark:text-[#d1c7bc] hover:text-[#e05a26] dark:hover:text-[#f59e0b]'
+                }`}
+              >
+                <span className="flex items-center gap-2">
+                  <span className="text-xs text-[#e05a26] dark:text-[#f59e0b]">✦</span>
+                  {link.name}
+                </span>
+                <span className="text-xs font-mono opacity-50">0{idx + 1}</span>
+              </a>
+            );
+          })}
+        </div>
       </div>
     </header>
   );
