@@ -17,7 +17,7 @@ export default function Footer() {
             © {currentYear} <span className="font-bold text-[#e05a26] dark:text-[#f59e0b]">Meet Dixit</span>. All rights reserved.
           </p>
           <p className="text-xs text-[#54433a]/70 dark:text-[#d1c7bc]/70 mt-1">
-            Designed & Built with React, Tailwind CSS & Konoha Spirit 🍃
+            Designed & Built with React, Tailwind CSS 
           </p>
         </div>
 
